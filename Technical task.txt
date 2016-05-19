@@ -1,0 +1,12 @@
+¬аша задача
+–еализовать метод #substrings, который принимает строку в качестве первого аргумента и массив подстрок (словарь) в качестве второго аргумента. ћетод должен вернуть хеш, содержащий каждую подстроку (независимо от регистра букв), котора€ была найдена в строке, и количество вхождений этой подстроки в строку.
+
+dictionary = ['below','down','go','going','horn','how','howdy','it','i','low','own','part','partner','sit']
+=> ['below','down','go','going','horn','how','howdy','it','i','low','own','part','partner','sit']
+
+substrings('below', dictionary)
+=> {'below'=>1, 'low'=>1}
+”бедитесь что метод корректно работает со строкой в которой несколько слов
+
+substrings('Howdy partner, sit down! How's it going?', dictionary)
+=> {'down'=>1, 'how'=>2, 'howdy'=>1,'go'=>1, 'going'=>1, 'it'=>2, 'i'=> 3, 'own'=>1,'part'=>1,'partner'=>1,'sit'=>1}
