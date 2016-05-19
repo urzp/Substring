@@ -3,6 +3,8 @@
 
 
 def substrings(text,dictionary)
+	text_arr=text.downcase.split(/[ ,!.\?]/)
+	text_arr
 	
 end
 
