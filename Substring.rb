@@ -8,13 +8,16 @@ def substrings(text,dictionary)
 	
 	dictionary.each do |d_word|
 		text_arr.each do |t_word|
-			if t_word==d_word
+			t_word.scan(/#{d_word}/) do |result|
 				
-				if hash_out[d_word]!=nil 
-					hash_out[d_word]+=1
-					else 
-						hash_out[d_word]=1
-					end
+				if result!=nil
+				
+					if hash_out[d_word]!=nil 
+						hash_out[d_word]+=1
+						else 
+							hash_out[d_word]=1
+						end
+				end
 			end
 		end	
 	end
@@ -23,7 +26,7 @@ def substrings(text,dictionary)
 	
 end
 
-text="Howdy partner, sit down! How's it going? going"
+text="Howdy partner, sit down! How's it going?"
 dictionary = ['below','down','go','going','horn','how','howdy','it','i','low','own','part','partner','sit']
 
 substrings(text,dictionary)
